@@ -1,0 +1,43 @@
+== README
+
+* Ruby version
+The project is configured to use rbenv.  If using rbenv, install ruby 2.0.0-p353 by typing
+ rbenv install 2.0.0-p353
+at the command line.
+
+* System dependencies
+Install the bundler gem from the command line at the project root to install the bundler gem 
+ gem install bundler
+
+
+* Configuration
+run bundle from the command line at the project root to install required gems
+ bundle
+
+* Database creation
+run the rake database create tasks from the command line at the project root to create the databases.
+ rake db:create && env RAILS_ENV=test rake db:create 
+**Please note**:  If you have data_engineering_development or data_engineering_test databases already existing, please rename the databases in config/database.yml for this application.
+
+* Database initialization
+run the rake database migration tasks from the command line at the project root to migrate the databases
+ rake db:migrate && env RAILS_ENV=test rake db:migrate
+
+* How to run the test suite
+run the RSpec test suite from the command line at the project root to run rspec tests
+ bundle exec rspec 
+
+* Running the application
+Start up a Rails server from the command line at the project root to start the application
+ bundle exec rails s 
+Open a browser window and navigate to http://localhost:3000 to use the application
+
+* Notes and Considerations
+
+If you've already imported a data file, the application will not let you import it again.  This is determined via hashing.  Any slight change to the data will allow it to be uploaded as the file hash will change.
+
+I had some reservations about including the price in the Item model as it seems that it may be possible (although not reflected in the example data) that a description could potentially be the same but with a different price.  If that's the case, I would put it in the Purchase model.  However, I went with what the example data appeared to do (reflect the price in description) and made the price a part of the Item model.
+
+Normally I would use a Postgres database, however for ease of set-up I opted for sqlite.
+
+<tt>rake doc:app</tt>.

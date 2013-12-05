@@ -1,0 +1,14 @@
+<h2>Import Tab Delimited Data File</h2>
+
+<% if @error_msg %>
+  <%= @error_msg %>
+<% end %>
+
+<% if @gross_revenue %>
+  <%= "Gross Revenue: #{number_to_currency(@gross_revenue)}" %>
+<% end %>
+
+<%= form_tag import_data_imports_path, multipart: true do%>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import Data File" %>
+<% end %>

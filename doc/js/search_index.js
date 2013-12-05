@@ -1,0 +1,1 @@
+var search_data = {"index":{"searchIndex":["readme"],"longSearchIndex":[""],"info":[["README","","README_rdoc.html","","<p>README\n<p>Ruby version\n\n<p>The project is configured to use rbenv.  If using rbenv, install ruby\n2.0.0-p353 by …\n"]]}}
