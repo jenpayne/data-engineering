@@ -1,6 +1,6 @@
 # Configuration Instructions
-1.  The project is configured to use rbenv.  If using rbenv, install ruby 2.0.0-p0 by typing `rbenv install 2.0.0-p0` at the command line. 
-2.  If not using rbenv, verify that you have ruby 2.0.0-p0 installed (use rvm or system ruby)
+1.  The project is configured to use rbenv.  If using rbenv, install ruby 2.0.0-p353 by typing `rbenv install 2.0.0-p353` at the command line. 
+2.  If not using rbenv, verify that you have ruby 2.0.0-p353 installed (use rvm or system ruby)
 3.  run `bundle` to install required gems
 4.  Run `rake db:create && rake db:migrate` to create and migrate the database.  **Please note**:  If you have data\_engineering\_development or data\_engineering\_test databases already existing, please rename the databases in `config/database.yml` for this application.
 5.  At the command line, run `bundle exec rails s` to start the rails server.
