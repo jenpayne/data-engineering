@@ -8,7 +8,7 @@ class DataImport < ActiveRecord::Base
     raise "No file selected" unless file
 
     super()
-    file_hash = Digest::MD5.hexdigest(File.read(self.file_path))    
+    file_hash = Digest::MD5.hexdigest(File.read(file.path))    
     raise "File has already been imported" if DataImport.find_by_file_hash(file_hash)
 
     self.file_path = file.path
